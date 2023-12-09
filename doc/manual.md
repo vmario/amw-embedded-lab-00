@@ -1,10 +1,12 @@
 ---
-title: "Instrukcja laboratorium systemów wbudowanych"
-subtitle: "Ćwiczenie 0: Pobieranie ćwiczenia i obsługa IDE"
+title: "Ćwiczenie 0: Wprowadzenie"
+subtitle: "Instrukcja laboratorium"
+footer-left: "Instrukcja laboratorium"
 author: [Mariusz Chilmon <<mariusz.chilmon@ctm.gdynia.pl>>]
 lang: "pl"
 titlepage: yes
-titlepage-logo: "logo.jpg"
+titlepage-logo: "logo.png"
+logo-width: "70mm"
 colorlinks: yes
 header-includes: |
   \usepackage{awesomebox}
@@ -18,7 +20,7 @@ header-includes: |
 
 \begin{description}
 \item[Płytka ewaluacyjna]
-ATB 1.05A firmy Atnel z mikrokontrolerem ATmega z rodziny AVR. Producentem mikrokontrolerów AVR jest firma Microchip Technologies, która w 2016 r.~przejęła pierwotnego producenta — firmę Atmel.
+\textit{Arduino Uno}.
 \item[Kompilator]
 AVR Toolchain v3.7 bazujący na kompilatorze GCC.
 \item[Programator]
@@ -34,15 +36,12 @@ Visual Studio Code (nie mylić z Visual Studio) z wtyczką \textit{C/C++} umożl
 1. Wyczyść zawartość katalogu `Embedded/Core`.
 1. Uruchom Visual Studio Code.
 1. Wciśnij _Ctrl + Shift + P_ i wpisz polecenie _git clone_.
-1. Sklonuj repozytorium Git [https://github.com/vmario/amw-embedded-labXX.git](https://github.com/vmario/amw-embedded-labXX.git), gdzie _XX_ to numer ćwiczenia.
+1. Sklonuj repozytorium Git [https://github.com/vmario/amw-embedded-lab-XX.git](https://github.com/vmario/amw-embedded-labXX.git), gdzie _XX_ to numer ćwiczenia.
 1. Wybierz katalog `Embedded/Code` do zapisania projektu.
 
 # Kompilacja programu
 
-1. Wybierz odpowiedni model mikrokontrolera w prawym dolnym rogu okna programu.
 1. Wciśnij _Ctrl + Shift + B_ i wybierz zadanie _all_.
-
-\notebox{Jeżeli zbudowałeś program dla niewłaściwego mikrokontrolera, wyczyść pliki wynikowe zadaniem \textit{clean}.}
 
 # Wgrywanie wsadu
 
@@ -58,7 +57,7 @@ Buduje program.
 \item[clean]
 Czyści wszystkie pliki wynikowe (usuwa efekt kompilacji).
 \item[erase]
-Czyści pamięć mikrokontrolera.
+Czyści pamięć mikrokontrolera i wgrywa bootloader. Wymaga zewnętrznego programatora.
 \item[program]
 Buduje program i wgrywa go do mikrokontrolera.
 \end{description}
