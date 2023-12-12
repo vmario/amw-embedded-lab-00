@@ -69,3 +69,27 @@ Czyści pamięć mikrokontrolera i wgrywa bootloader. Wymaga zewnętrznego progr
 \item[program]
 Buduje program i wgrywa go do mikrokontrolera.
 \end{description}
+
+# Ustawianie bitóW w rejestrach
+
+Aby ustawić bity, np. o numerze `2` i `3` w rejestrze `REG` można:
+
+REG = 0b00001100;
+
+REG = 0x0c;
+
+REG |= 0b00001100;
+REG |= _BV(2) | _BV(3);
+REG |= (1 << 2) | (1 << 3)
+
+Aby wyzerować bity:
+
+REG = 0b11110011;
+
+REG = 0x;
+
+
+REG &= ~0b00001100;
+REG &= 0b11110011;
+REG &= ~(_BV(2) | _BV(3));
+REG &= ~((1 << 2) | (1 << 3))
