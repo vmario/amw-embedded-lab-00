@@ -20,7 +20,7 @@ header-includes: |
 
 \begin{description}
 \item[Płytka ewaluacyjna]
-\textit{Arduino Uno}.
+\textit{Arduino Uno} z procesorem ATmega328P.
 \item[Kompilator]
 AVR Toolchain v3.7 bazujący na kompilatorze GCC.
 \item[Programator]
@@ -33,7 +33,7 @@ Visual Studio Code (nie mylić z Visual Studio) z wtyczką \textit{C/C++} umożl
 
 # Pobieranie kodu i instrukcji do ćwiczenia
 
-1. Wyczyść zawartość katalogu `Embedded/Core`.
+1. Wyczyść zawartość katalogu `Embedded/Code`.
 1. Uruchom Visual Studio Code.
 1. Wciśnij _Ctrl + Shift + P_ i wpisz polecenie _git clone_.
 1. Sklonuj repozytorium Git [https://github.com/vmario/amw-embedded-lab-XX.git](https://github.com/vmario/amw-embedded-labXX.git), gdzie _XX_ to numer ćwiczenia.
@@ -49,13 +49,21 @@ Visual Studio Code (nie mylić z Visual Studio) z wtyczką \textit{C/C++} umożl
 
 \notebox{Zadanie \textit{program} przebudowuje też program wynikowy, jeżeli zostały wprowadzone jakieś zmiany w plikach źródłowych. Zatem, jeżeli chcesz skompilować program i od razu go wgrać, możesz pominąć zadanie \textit{all}.}
 
+Jeżeli wystąpi problem
+
+avrdude error: cannot open port \\.\COM2: Nie mo┐na odnalečŠ okreťlonego pliku.
+
+avrdude error: unable to open programmer arduino on port \\.\COM2
+
+należy ustawić odpowiedni numer portu w zmiennej `port` w pliku `.vscode/settings.json`. Aby określić numer portu, należy uruchomić _Menedżer urządzeń_, rozwinąć listę _Porty (COM i LPT)_, a następnie podłączyć płytkę ewaluacyjną i zaobserwować nowy numer portu oznaczony nazwą _Arduino Uno_ lub _Urządzenie szeregowe USB_.
+
 # Opis skonfigurowanych zadań
 
 \begin{description}
 \item[all]
 Buduje program.
 \item[clean]
-Czyści wszystkie pliki wynikowe (usuwa efekt kompilacji).
+Czyści wszystkie pliki wynikowe (usuwa efekt budowania).
 \item[erase]
 Czyści pamięć mikrokontrolera i wgrywa bootloader. Wymaga zewnętrznego programatora.
 \item[program]
