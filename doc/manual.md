@@ -36,7 +36,7 @@ Visual Studio Code (nie mylić z Visual Studio) z wtyczką \textit{C/C++} umożl
 1. Wyczyść zawartość katalogu `Embedded/Code`.
 1. Uruchom Visual Studio Code.
 1. Wciśnij _Ctrl + Shift + P_ i wpisz polecenie _git clone_.
-1. Sklonuj repozytorium Git [https://github.com/vmario/amw-embedded-lab-XX.git](https://github.com/vmario/amw-embedded-labXX.git), gdzie _XX_ to numer ćwiczenia.
+1. Sklonuj repozytorium Git [https://github.com/vmario/amw-embedded-lab-XX.git](https://github.com/vmario/amw-embedded-labXX.git), gdzie _XX_ to numer ćwiczenia. Nie wybieraj opcji _Clone from GitHub_, ale wpisz adres i wybierz _Clone from URL_.
 1. Wybierz katalog `Embedded/Code` do zapisania projektu.
 
 # Kompilacja programu
