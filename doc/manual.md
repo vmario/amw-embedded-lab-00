@@ -51,9 +51,11 @@ Visual Studio Code (nie mylić z Visual Studio) z wtyczką \textit{C/C++} umożl
 
 Jeżeli wystąpi problem
 
-avrdude error: cannot open port \\.\COM2: Nie mo┐na odnalečŠ okreťlonego pliku.
+```
+avrdude error: cannot open port \\.\COM2: Nie mozna odnalezc okreslonego pliku.
 
 avrdude error: unable to open programmer arduino on port \\.\COM2
+```
 
 należy ustawić odpowiedni numer portu w zmiennej `port` w pliku `.vscode/settings.json`. Aby określić numer portu, należy uruchomić _Menedżer urządzeń_, rozwinąć listę _Porty (COM i LPT)_, a następnie podłączyć płytkę ewaluacyjną i zaobserwować nowy numer portu oznaczony nazwą _Arduino Uno_ lub _Urządzenie szeregowe USB_.
 
