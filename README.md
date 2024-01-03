@@ -1,3 +1,3 @@
-# Laboratorium systemów wbudowanych: Ćwiczenie 0
+# Laboratorium
 
 Instrukcja znajduje się w pliku `doc/manual.pdf`.
