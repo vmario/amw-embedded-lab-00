@@ -99,3 +99,5 @@ cout << "Hello, world!" << endl;
 \EndIf
 \end{algorithmic}
 \end{algorithm}
+
+![Tytuł](device-manager.png){width=200px}
